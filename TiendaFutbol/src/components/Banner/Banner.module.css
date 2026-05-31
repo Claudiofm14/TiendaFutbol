@@ -1,0 +1,23 @@
+.hero {
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.content {
+  color: white;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
