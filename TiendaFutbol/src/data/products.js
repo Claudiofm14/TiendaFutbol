@@ -33,89 +33,102 @@ export const camisetas= [
         nombre: 'BOCA',
         urlImagenTitular: boca,
         urlImagenSuplente: bocaSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 2,
         nombre: 'RIVER',
         urlImagenTitular: river ,
         urlImagenSuplente: riverSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 3,
         nombre: 'ARGENTINOS',
         urlImagenTitular: argentinos,
         urlImagenSuplente: argentinosSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 4, nombre: 'RACING',
         urlImagenTitular: racing,
         urlImagenSuplente: racingSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 5, nombre: 'SAN LORENZO',
         urlImagenTitular: sanLorenzo,
         urlImagenSuplente: sanLorenzoSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 6,
         nombre: 'INDEPENDIENTE',
         urlImagenTitular: independiente,
         urlImagenSuplente: independienteSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 7,
         nombre: 'HURACAN',
         urlImagenTitular: huracan,
         urlImagenSuplente: huracanSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 8,
         nombre: 'VELEZ',
         urlImagenTitular: velez,
         urlImagenSuplente: velezSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 9,
         nombre: 'NEWELLS',
         urlImagenTitular: newells,
         urlImagenSuplente: newellsSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 10,
         nombre: 'ROSARIO CENTRAL',
         urlImagenTitular: rosarioCentral,
         urlImagenSuplente: rosarioCentralSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 11,
         nombre: 'GIMNASIA',
         urlImagenTitular: gimnasia,
         urlImagenSuplente: gimnasiaSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 12,
         nombre: 'TIGRE',
         urlImagenTitular: tigre,
         urlImagenSuplente: tigreSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     },
     {
         id: 13,
         nombre: 'ESTUDIANTES',
         urlImagenTitular: estudiantes,
         urlImagenSuplente: estudiantesSuplente,
-        precio: 10000
+        precio: 10000,
+        stock: 10
     }
 
 ]

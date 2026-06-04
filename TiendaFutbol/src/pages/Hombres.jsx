@@ -11,7 +11,7 @@ import {CartContext} from "../context/CartContext.jsx";
 
 function Hombres() {
     const productos = useContext(ProductContext);
-    const {agregarAlCarrito} = useContext(CartContext);
+    const {agregarAlCarrito, agregarProductoAlCarrito} = useContext(CartContext);
     return (
         <div>
 
@@ -30,7 +30,10 @@ function Hombres() {
                                     <Card.Text>
                                         {producto.precio}
                                     </Card.Text>
-                                    <Button variant="primary" onClick={() => agregarAlCarrito()}>Añadir al carrito</Button>
+                                    <Button variant="primary" onClick={() => {agregarAlCarrito();
+                                        agregarProductoAlCarrito(producto);
+                                        
+                                    }} >Añadir al carrito</Button>
                                     </Card.Body>
 
 

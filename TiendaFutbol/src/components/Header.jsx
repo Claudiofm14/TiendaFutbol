@@ -33,7 +33,7 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <ButtonCarrito />
+          <ButtonCarrito as={NavLink} to="/carrito" />
         </Navbar.Collapse>
       </Container>
     </Navbar>
