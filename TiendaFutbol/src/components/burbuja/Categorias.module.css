@@ -1,0 +1,9 @@
+.columna img {
+  cursor: pointer;
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  will-change: transform, box-shadow;
+}
+.columna:hover img {
+  box-shadow: 0px 12px 30px 0px rgba(38, 37, 37, 0.5); 
+  transform: scale(1.1); 
+}
