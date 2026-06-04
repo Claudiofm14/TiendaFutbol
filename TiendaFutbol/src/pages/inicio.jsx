@@ -3,15 +3,15 @@ import Banner from "../components/Banner/Banner.jsx";
 import Categorias from "../components/burbuja/Categorias.jsx";
 import SobreNosotros from "../components/sobreNosotros/SobreNosotros.jsx";
 
-function inicio() {
+function Inicio() {
   return (
     <div>
-      <Navar1/>
-      <Banner/>
-      <SobreNosotros/>
-      <Categorias/>
+        <Navar1 />
+        <Banner/>
+        <SobreNosotros/>
+        <Categorias/>
     </div>
   )
 }
 
-export default inicio
+export default Inicio
