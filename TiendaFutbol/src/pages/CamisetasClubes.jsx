@@ -1,7 +1,6 @@
 import Header from "../components/Header.jsx";
 import {useContext} from "react";
 import {ProductContext} from "../context/ProductContext.jsx";
-import {NavLink} from "react-router";
 import {Card, Col} from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Container from "react-bootstrap/Container";
@@ -9,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import {CartContext} from "../context/CartContext.jsx";
 
 
-function Hombres() {
+function CamisetasClubes() {
     const productos = useContext(ProductContext);
     const {agregarAlCarrito, agregarProductoAlCarrito} = useContext(CartContext);
     return (
@@ -47,4 +46,4 @@ function Hombres() {
     );
 }
 
-export default Hombres;
+export default CamisetasClubes;

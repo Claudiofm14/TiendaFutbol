@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext.jsx";
 import Header from "../components/Header.jsx";
 import { Card, Col, Button, Container, Row } from "react-bootstrap";
+import {Link} from "react-router"
 
 function Carrito() {
     // Traemos también 'vaciarCarrito' del contexto
@@ -27,6 +28,7 @@ function Carrito() {
                             <div className="text-start p-5 border rounded bg-light">
                                 <h4>Tu carrito está vacío</h4>
                                 <p>¡Anda a la tienda y agrega algunos productos!</p>
+                                <Button as={Link} to="/camisetasClubes" variant="success">Comprar</Button>
                             </div>
                         ) : (
                             <Row className="flex-column m-0">

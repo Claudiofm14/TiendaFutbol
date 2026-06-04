@@ -42,7 +42,7 @@ function Navar1() {
             </button>
 
             <button className={styles.loginBtn}>
-              <i className="bi bi-person"></i> INGRESÁ
+              <i className="bi bi-person"></i> Contactanos
             </button>
 
             <ButtonCarrito />
@@ -57,11 +57,8 @@ function Navar1() {
           <Navbar.Toggle aria-controls="main-nav" className={styles.customToggle} />
           <Navbar.Collapse id="main-nav">
             <Nav className="w-100 d-flex justify-content-start gap-3">
-              <Nav.Link as={NavLink} to="/hombres" className={styles.navLinkItem}>HOMBRE</Nav.Link>
-              <Nav.Link as={NavLink} to="/mujeres" className={styles.navLinkItem}>MUJER</Nav.Link>
-              <Nav.Link as={NavLink} to="/ninos" className={styles.navLinkItem}>NIÑOS</Nav.Link>
-              <Nav.Link as={NavLink} to="/marcas" className={styles.navLinkItem}>MARCAS</Nav.Link>
-              <Nav.Link as={NavLink} to="/clubes" className={styles.navLinkItem}>CLUBES</Nav.Link>
+              <Nav.Link as={NavLink} to="/camisetasClubes" className={styles.navLinkItem}>CLUBES</Nav.Link>
+              <Nav.Link as={NavLink} to="/mujeres" className={styles.navLinkItem}>SELECCIONES</Nav.Link>
               <Nav.Link as={NavLink} to="/deportes" className={styles.navLinkItem}>DEPORTES</Nav.Link>
               <Nav.Link as={NavLink} to="#ofertas" className={styles.navLinkItem}>OFERTAS</Nav.Link>
             </Nav>
