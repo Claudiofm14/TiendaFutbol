@@ -2,6 +2,7 @@ import { Navbar, Nav, Container, Form, InputGroup } from 'react-bootstrap';
 import styles from './Nav.module.css';
 import logo from '../../assets/images/nombreTienda.png'
 import {NavLink} from "react-router";
+import ButtonCarrito from "../ButtonCarrito/ButtonCarrito.jsx";
 
 function Navar1() {
   return (
@@ -44,12 +45,7 @@ function Navar1() {
               <i className="bi bi-person"></i> INGRESÁ
             </button>
 
-            <div className={styles.cartContainer}>
-              <span className={styles.cartLabel}>
-                <i className="bi bi-bag"></i> CARRITO
-              </span>
-              <span className={styles.cartBadge}>0</span>
-            </div>
+            <ButtonCarrito />
           </div>
 
         </Container>
