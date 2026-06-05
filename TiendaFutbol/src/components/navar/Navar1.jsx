@@ -1,10 +1,12 @@
 import { Navbar, Nav, Container, Form, InputGroup } from 'react-bootstrap';
 import styles from './Nav.module.css';
 import logo from '../../assets/images/nombreTienda.png'
-import {NavLink} from "react-router";
+import {NavLink, useNavigate} from "react-router";
 import ButtonCarrito from "../ButtonCarrito/ButtonCarrito.jsx";
 
+
 function Navar1() {
+  const navigate = useNavigate();
   return (
     <header className={styles.headerContainer}>
 
@@ -41,7 +43,7 @@ function Navar1() {
               <i className="bi bi-heart"></i>
             </button>
 
-            <button className={styles.loginBtn}>
+            <button className={styles.loginBtn} onClick={() => navigate('/contacto')}>
               <i className="bi bi-person"></i> Contactanos
             </button>
 
