@@ -19,7 +19,7 @@ function Carrito() {
             <Header />
             
             <Container fluid className="mt-5 mb-5 px-4 px-md-5">
-                <Row className="justify-content-start">
+                <Row className="justify-content-center">
                     <Col xs={12} md={10} lg={8} xl={6}>
                         
                         <h2 className="mb-4 text-start">Carrito de Compras</h2>

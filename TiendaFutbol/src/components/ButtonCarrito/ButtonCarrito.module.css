@@ -1,0 +1,11 @@
+.cartBtn {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    padding: 0;
+    background-color: #F97316;
+}
