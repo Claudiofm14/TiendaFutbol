@@ -6,23 +6,23 @@ import {Form} from "react-bootstrap";
 
 
 function Formulario(){
-    // 1. Estado para almacenar los datos del formulario
+
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
         email: '',
         direccion: '',
-        metodoEntrega: 'envio', // Valor por defecto
+        metodoEntrega: 'envio',
         mensaje: ''
     });
 
-    // 2. Estado para manejar los errores de cada input
+
     const [errores, setErrores] = useState({});
 
-    // 3. Estado para mostrar la alerta general de éxito o error
+
     const [alerta, setAlerta] = useState(null);
 
-    // Función para actualizar el estado cuando el usuario escribe
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -31,7 +31,7 @@ function Formulario(){
         });
     };
 
-    // Función para validar los campos
+
     const validarFormulario = () => {
         let nuevosErrores = {};
 
@@ -50,7 +50,7 @@ function Formulario(){
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Evita que la página se recargue
+        e.preventDefault();
 
         const erroresValidacion = validarFormulario();
 
@@ -81,17 +81,17 @@ function Formulario(){
         <Container className="my-5 p-4 bg-white rounded shadow-sm border" style={{ maxWidth: '800px' }}>
             <h2 className="mb-4 text-center fw-bold text-dark">Contactanos</h2>
 
-            {/* Uso del componente Alert de Bootstrap */}
+
             {alerta && (
                 <Alert variant={alerta.tipo === 'error' ? 'danger' : 'success'} className="text-center fw-medium">
                     {alerta.texto}
                 </Alert>
             )}
 
-            {/* 'noValidate' evita las bombitas feas nativas de HTML y nos deja usar las de Bootstrap */}
+
             <Form onSubmit={handleSubmit} noValidate>
 
-                {/* Fila: Nombre y Apellido */}
+
                 <Row className="mb-3">
                     <Form.Group as={Col} md="6" controlId="formNombre" className="mb-3 mb-md-0">
                         <Form.Label>Nombre</Form.Label>
@@ -100,9 +100,9 @@ function Formulario(){
                             name="nombre"
                             value={formData.nombre}
                             onChange={handleChange}
-                            isInvalid={!!errores.nombre} // Activa el estilo rojo de Bootstrap si hay error
+                            isInvalid={!!errores.nombre}
                         />
-                        {/* Mensaje de error, Bootstrap lo muestra solo cuando isInvalid es true */}
+
                         <Form.Control.Feedback type="invalid">
                             {errores.nombre}
                         </Form.Control.Feedback>
@@ -167,7 +167,7 @@ function Formulario(){
                     </Form.Group>
                 </Row>
 
-                {/* Fila: Mensaje */}
+
                 <Form.Group className="mb-4" controlId="formMensaje">
                     <Form.Label>Mensaje o Consulta</Form.Label>
                     <Form.Control
@@ -184,7 +184,7 @@ function Formulario(){
                     </Form.Control.Feedback>
                 </Form.Group>
 
-                {/* Botón */}
+
                 <Button variant="primary" type="submit" className="w-100 py-2 fw-bold" style={{ backgroundColor: '#0076ce' }}>
                     Enviar Consulta
                 </Button>
