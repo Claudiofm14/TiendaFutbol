@@ -44,7 +44,7 @@ function Navar1() {
             </button>
 
             <button className={styles.loginBtn} onClick={() => navigate('/contacto')}>
-              <i className="bi bi-person"></i> Contactanos
+              <i className=""></i> Contactanos
             </button>
 
             <ButtonCarrito />

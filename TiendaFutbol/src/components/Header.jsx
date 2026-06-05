@@ -17,11 +17,13 @@ function Header() {
             <Nav.Link as={NavLink} to="/">
               Inicio
             </Nav.Link>
-            <Nav.Link href="#link">Productos</Nav.Link>
+            <Nav.Link as={NavLink} to="/camisetasClubes">
+              Productos
+            </Nav.Link>
 
             <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Nosotros</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={NavLink} to="/contacto">
                Contacto
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">falta completar</NavDropdown.Item>

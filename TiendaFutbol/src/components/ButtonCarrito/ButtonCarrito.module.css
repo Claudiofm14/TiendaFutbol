@@ -7,5 +7,6 @@
     justify-content: center;
     border-radius: 50% !important;
     padding: 0;
-    background-color: #F97316;
+    border: none;
+    background-color: #BEBEBE;
 }

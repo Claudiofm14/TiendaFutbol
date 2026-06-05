@@ -60,6 +60,15 @@
   align-items: center;
   gap: 8px;
   color: #0f172a;
+
+  transition: color 0.3s ease, background-color 0.3s ease ,border-color 0.3s ease, transform 0.2s ease;
+}
+.loginBtn:hover {
+  background-color: #e2e8f0;
+  border: 1px solid #0076ce;
+  color: #0076ce;
+
+
 }
 
 /* Contenedor Carrito estilo Solo Deportes */
