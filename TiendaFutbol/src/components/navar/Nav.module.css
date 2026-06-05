@@ -1,7 +1,7 @@
 .headerContainer {
   width: 100%;
   font-family: 'Roboto', sans-serif; /* O la tipografía que uses en tu app */
-  background-color: #ffffff;
+  background-color: #343a40;
 }
 
 .topHeader {
@@ -71,11 +71,11 @@
 
 }
 
-/* Contenedor Carrito estilo Solo Deportes */
+
 .cartContainer {
   display: flex;
   align-items: center;
-  background-color: #008f39; /* Verde deportivo */
+  background-color: #008f39;
   color: white;
   border-radius: 4px;
   overflow: hidden;
@@ -99,7 +99,7 @@
 
 /* BARRA DE MENÚ AZUL */
 .mainNavbar {
-  background-color: #0076ce !important; /* El color azul Francia de la foto */
+  background-color: #000 !important; /* El color azul Francia de la foto */
   padding: 0 !important;
 }
 
@@ -109,11 +109,11 @@
   font-size: 0.85rem;
   padding: 12px 10px !important;
   letter-spacing: 0.5px;
-  transition: background-color 0.2s ease;
+  transition: border-bottom 1s ease,border-bottom-color 1s ease,transform 0.2s ease;
 }
 
 .navLinkItem:hover {
-  background-color: #0064b0; /* Un azul un toque más oscuro al pasar el mouse */
+  border-bottom: 1px solid white;
 }
 
 /* Adaptación para el menú colapsable en celulares */
