@@ -6,6 +6,20 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
     const [contador, setContador] = useState(0);
     const [carrito, setCarrito] = useState([]);
+    const [busqueda, setBusqueda] = useState("");
+
+    const obtenerDatos = (dato) => {
+        setBusqueda(dato)
+    }
+
+    const busquedaActual = () =>{
+        return busqueda
+    }
+
+    const limpiarBuscador = () =>{
+        setBusqueda("")
+    }
+    
     const agregarAlCarrito = () => {
         setContador(contador + 1);
     };
@@ -38,7 +52,7 @@ export function CartProvider({ children }) {
     }
     
     return (
-        <CartContext.Provider value={{ contador, carrito, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra }}>
+        <CartContext.Provider value={{ contador, carrito, busqueda, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra,obtenerDatos,busquedaActual,limpiarBuscador }}>
             {children}
         </CartContext.Provider>
     );

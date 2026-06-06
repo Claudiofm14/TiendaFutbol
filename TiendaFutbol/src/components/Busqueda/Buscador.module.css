@@ -1,0 +1,23 @@
+.searchArea {
+  width: 45%;
+}
+
+.searchInput {
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+}
+
+.searchInput:focus {
+  border-color: #0076ce;
+  box-shadow: none;
+  background-color: #fff;
+}
+
+.searchIcon {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: none;
+  cursor: pointer;
+}

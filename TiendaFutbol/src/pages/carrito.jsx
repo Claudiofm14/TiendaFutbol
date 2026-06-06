@@ -4,9 +4,10 @@ import Header from "../components/Header.jsx";
 import { Card, Col, Button, Container, Row } from "react-bootstrap";
 import {Link} from "react-router"
 
+
 function Carrito() {
     // Traemos también 'vaciarCarrito' del contexto
-    const { carrito, vaciarCarrito, realizarCompra } = useContext(CartContext);
+    const { carrito, vaciarCarrito, realizarCompra,limpiarBuscador } = useContext(CartContext);
 
     // Calculamos el total recorriendo el carrito.
     // OJO: Esto asume que producto.precio es un número (ej: 2500) y no un texto (ej: "$2500").
@@ -28,7 +29,7 @@ function Carrito() {
                             <div className="text-start p-5 border rounded bg-light">
                                 <h4>Tu carrito está vacío</h4>
                                 <p>¡Anda a la tienda y agrega algunos productos!</p>
-                                <Button as={Link} to="/camisetasClubes" variant="success">Comprar</Button>
+                                <Button as={Link} to="/camisetasClubes" variant="success" onClick={()=> limpiarBuscador()}>Comprar</Button>
                             </div>
                         ) : (
                             <Row className="flex-column m-0">
