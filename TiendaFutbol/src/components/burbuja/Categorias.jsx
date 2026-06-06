@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { ProductContext } from '../../context/ProductContext';
 
 import styles from './Categorias.module.css'
+import { Link } from 'react-router';
 
 
 const Categorias = () => {
@@ -19,9 +20,11 @@ const Categorias = () => {
       <Row className="justify-content-center g-4">
         {equipos.map(e => (
           <Col key={e.id} xs={6} sm={4} md={2} className={`d-flex flex-column align-items-center ${styles.columna}`}>
-            <div className="position-relative mb-3">
-              <img src={e.urlImagenTitular} alt={e.nombre} className="img-fluid rounded-circle" style={{ width: '140px', height: '140px', objectFit: 'cover' }} />
-            </div>
+            <Link to={`/producto/${e.id}`}>
+              <div className="position-relative mb-3">
+                <img src={e.urlImagenTitular} alt={e.nombre} className="img-fluid rounded-circle" style={{ width: '140px', height: '140px', objectFit: 'cover' }} />
+              </div>
+            </Link>
 
             <span className="fw-bold text-dark" style={{ fontSize: '0.75rem', letterSpacing: '0.5px' }}>
               {e.nombre}
