@@ -6,6 +6,8 @@ import {Route, Routes} from "react-router-dom";
 import {CartProvider} from "./context/CartContext.jsx";
 import CamisetasClubes from "./pages/CamisetasClubes.jsx";
 import Contacto from "./pages/contacto/Contacto.jsx";
+import DetalleProducto from "./pages/DetalleProducto.jsx";
+
 function App(){
   return (
       <>
@@ -18,6 +20,7 @@ function App(){
                     <Route path="/camisetasClubes" element={<CamisetasClubes/>} />
                     <Route path="/carrito" element={<Carrito/>} />
                     <Route path="/contacto" element={<Contacto/>} />
+                    <Route path="/producto/:id" element={<DetalleProducto/>}/>
                 </Routes>
             </CartProvider>
         </ProductContext.Provider>

@@ -15,10 +15,6 @@ const Buscador = () => {
 
                     <Form.Control placeholder="¿Qué estás buscando?" aria-label="Buscar" className={styles.searchInput} onChange={(e) => obtenerDatos(e.target.value)}/>
 
-                    <InputGroup.Text className={styles.searchIcon}>
-                        <i className="bi bi-search"> buscar </i>
-                    </InputGroup.Text>
-
                 </InputGroup>
 
             </div>

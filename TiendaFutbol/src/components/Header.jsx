@@ -4,9 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {NavLink} from "react-router";
 import ButtonCarrito from "./ButtonCarrito/ButtonCarrito.jsx";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext.jsx";
 
 
 function Header() {
+      const {limpiarBuscador } = useContext(CartContext);
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary me-auto">
       <Container >
@@ -17,7 +21,7 @@ function Header() {
             <Nav.Link as={NavLink} to="/">
               Inicio
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/camisetasClubes">
+            <Nav.Link as={NavLink} to="/camisetasClubes" onClick={()=> limpiarBuscador()}>
               Productos
             </Nav.Link>
 
