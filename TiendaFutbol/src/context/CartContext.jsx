@@ -46,13 +46,34 @@ export function CartProvider({ children }) {
         setContador(0);
     }
 
+    const actualizarCantidad = (id, nuevaCantidad) => {
+        // Formateamos el número para evitar errores
+        const cantidadNumerica = parseInt(nuevaCantidad);
+
+        const carritoActualizado = carrito.map(item => {
+            if (item.id === id) {
+                return { ...item, cantidad: cantidadNumerica };
+            }
+            return item;
+        });
+
+        setCarrito(carritoActualizado);
+
+
+        const nuevoContador = carritoActualizado.reduce((acc, item) => acc + item.cantidad, 0);
+        setContador(nuevoContador);
+    };
+
+
+
+
     const realizarCompra = () => {
         alert( "¡Compra realizada con éxito!");
         vaciarCarrito();
     }
     
     return (
-        <CartContext.Provider value={{ contador, carrito, busqueda, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra,obtenerDatos,busquedaActual,limpiarBuscador }}>
+        <CartContext.Provider value={{ contador, carrito, busqueda, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra,obtenerDatos,busquedaActual,limpiarBuscador, actualizarCantidad }}>
             {children}
         </CartContext.Provider>
     );

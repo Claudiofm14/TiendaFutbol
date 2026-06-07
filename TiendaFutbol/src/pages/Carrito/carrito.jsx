@@ -1,16 +1,16 @@
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext.jsx";
-import Header from "../components/Header.jsx";
-import { Card, Col, Button, Container, Row } from "react-bootstrap";
+import { CartContext } from "../../context/CartContext.jsx";
+import Header from "../../components/Header.jsx";
+import { Card, Col, Button, Container, Row, Form } from "react-bootstrap";
 import {Link} from "react-router"
+import styles from "./carrito.module.css";
 
 
 function Carrito() {
-    // Traemos también 'vaciarCarrito' del contexto
-    const { carrito, vaciarCarrito, realizarCompra,limpiarBuscador } = useContext(CartContext);
 
-    // Calculamos el total recorriendo el carrito.
-    // OJO: Esto asume que producto.precio es un número (ej: 2500) y no un texto (ej: "$2500").
+    const { carrito, vaciarCarrito, realizarCompra,limpiarBuscador, actualizarCantidad } = useContext(CartContext);
+
+
     const totalPrecio = carrito.reduce((acumulador, producto) => {
         return acumulador + (producto.precio * producto.cantidad);
     }, 0);
@@ -49,11 +49,23 @@ function Carrito() {
                                                     <Card.Body className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center py-2">
                                                         <div className="text-start">
                                                             <Card.Title className="mb-1 fs-5 fw-semibold">
-                                                                {producto.nombre}
+                                                                {producto.descripcion}
                                                             </Card.Title>
-                                                            <Card.Text className="text-muted mb-0 font-monospace">
-                                                                Precio: ${producto.precio * producto.cantidad}
-                                                            </Card.Text>
+                                                            <div className={styles.contenedorSelector}>
+
+
+                                                                <Form.Select
+                                                                    className={styles.selectorCantidad}
+                                                                    value={producto.cantidad}
+                                                                    onChange={(e) => actualizarCantidad(producto.id, e.target.value)}
+                                                                >
+                                                                    {[...Array(producto.stock)].map((_, i) => (
+                                                                        <option key={i + 1} value={i + 1}>
+                                                                            {i + 1} {i === 0 ? "unidad" : "unidades"}
+                                                                        </option>
+                                                                    ))}
+                                                                </Form.Select>
+                                                            </div>
                                                             <Card.Text className="text-muted mb-0 font-monospace">
                                                                 Cantidad: {producto.cantidad}
                                                             </Card.Text>
@@ -67,13 +79,13 @@ function Carrito() {
                             </Row>
                         )}
 
-                        {/* SECCIÓN INFERIOR: Total y Botones */}
+
                         {carrito.length > 0 && (
                             <div className="mt-4 pt-4 border-top text-start">
-                                {/* Muestra el total calculado */}
+
                                 <h3 className="mb-4 fw-bold">Total a pagar: ${totalPrecio}</h3>
                                 
-                                {/* d-flex con gap-3 separa los botones limpiamente */}
+
                                 <div className="d-flex flex-wrap gap-3 justify-content-start">
                                     <Button 
                                         variant="outline-danger" 

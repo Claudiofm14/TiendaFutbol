@@ -1,5 +1,5 @@
 import Inicio from "./pages/inicio.jsx";
-import Carrito from "./pages/carrito.jsx";
+import Carrito from "./pages/Carrito/carrito.jsx";
 import {ProductContext} from "./context/ProductContext.jsx";
 import {camisetas} from "./data/products.js";
 import {Route, Routes} from "react-router-dom";
