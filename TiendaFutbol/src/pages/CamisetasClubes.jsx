@@ -12,18 +12,23 @@ import {Link} from "react-router-dom"
 
 function CamisetasClubes() {
     const productos = useContext(ProductContext);
-    const { agregarAlCarrito, agregarProductoAlCarrito, busquedaActual } = useContext(CartContext);
+    const {carrito,  agregarAlCarrito, agregarProductoAlCarrito, busquedaActual } = useContext(CartContext);
 
     const productosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(busquedaActual().trim().toLowerCase()))
 
+    const getStockDisponible = (producto) => {
+        const itemEnCarrito = carrito.find(item => item.id === producto.id);
+        const cantidadYaEnCarrito = itemEnCarrito ? itemEnCarrito.cantidad : 0;
+        return producto.stock - cantidadYaEnCarrito;
+    }
 
      const disponibilidadStock = (producto) => {
-        if (producto.stock === 0) {
-            return <Button variant="outline-danger" disabled size="sm">Sin Stock</Button>;
-        }
-        return <Button variant="outline-success" disabled size="sm">Disponible ({producto.stock} u.)</Button>;
+        const stockReal = getStockDisponible(producto);
+         if (stockReal <= 0) {
+             return <Button variant="outline-danger" disabled size="sm">Sin Stock</Button>;
+         }
+         return <Button variant="outline-success" disabled size="sm">Disponible ({stockReal} u.)</Button>;
     };
-
     return (
         <div>
 
@@ -44,14 +49,14 @@ function CamisetasClubes() {
 
             <Container className="mt-5">
                 <Row className="g-4 justify-content-center">
+
                     {productosFiltrados.map((producto) => (
                         <Col key={producto.id} xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center">
 
                             <Card style={{ width: '100%', maxWidth: '18rem' }} className="h-100 shadow-sm">
 
-                                <div style={{ height: '250px', p: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <Card.Img style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} variant="top" src={producto.urlImagenTitular}
-                                    />
+                                <div style={{ height: '250px', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Card.Img style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} variant="top" src={producto.urlImagenTitular} />
                                 </div>
 
                                 <Card.Body className="d-flex flex-column justify-content-between">
@@ -61,8 +66,8 @@ function CamisetasClubes() {
                                         <Card.Text className="fw-bold text-muted">${producto.precio}</Card.Text>
                                     </div>
                                     <div>
-                                         <Link
-                                         to={`/producto/${producto.id}`}
+                                        <Link
+                                            to={`/producto/${producto.id}`}
                                             style={{
                                                 background: 'none',
                                                 border: 'none',
@@ -76,21 +81,25 @@ function CamisetasClubes() {
                                             Ver más
                                         </Link>
                                     </div>
-                                     <div className="mt-3">
-                                        {/* Mostramos el indicador de stock dinámico */}
+                                    <div className="mt-3">
+
                                         <div className="mb-2 text-center">
                                             {disponibilidadStock(producto)}
                                         </div>
 
-                                        {/* El botón de añadir se deshabilita si el stock llega a 0 */}
-                                        <Button 
-                                            variant={producto.stock === 0 ? "secondary" : "primary"} 
+
+                                        <Button
+                                            variant={getStockDisponible(producto) <= 0 ? "secondary" : "primary"}
                                             className="w-100"
-                                            disabled={producto.stock === 0}
-                                            onClick={() => {agregarAlCarrito(), agregarProductoAlCarrito()}}
+                                            disabled={getStockDisponible(producto) <= 0}
+                                            onClick={() => {
+                                                agregarAlCarrito();
+                                                agregarProductoAlCarrito(producto);
+                                            }}
                                         >
-                                            {producto.stock === 0 ? "Agotado" : "Añadir al carrito"}
+                                            {getStockDisponible(producto) <= 0 ? "Agotado" : "Añadir al carrito"}
                                         </Button>
+
                                     </div>
                                 </Card.Body>
                             </Card>

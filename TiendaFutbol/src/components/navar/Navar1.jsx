@@ -37,7 +37,7 @@ function Navar1() {
             </InputGroup>
           </div>
 
-          {/* Accesos de Usuario / Carrito */}
+
           <div className={styles.userArea}>
             <button className={styles.iconBtn} aria-label="Favoritos">
               <i className="bi bi-heart"></i>
@@ -53,7 +53,7 @@ function Navar1() {
         </Container>
       </div>
 
-      {/* SECCIÓN INFERIOR: Barra de Navegación Azul */}
+
       <Navbar expand="lg" className={styles.mainNavbar}>
         <Container fluid="xl">
           <Navbar.Toggle aria-controls="main-nav" className={styles.customToggle} />
