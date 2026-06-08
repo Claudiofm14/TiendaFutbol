@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Inicio from "./pages/inicio.jsx";
+import './App.css';
 import Carrito from "./pages/Carrito/carrito.jsx";
 import {ProductContext} from "./context/ProductContext.jsx";
 import {camisetas} from "./data/products.js";
@@ -9,10 +14,18 @@ import Contacto from "./pages/contacto/Contacto.jsx";
 import DetalleProducto from "./pages/DetalleProducto.jsx";
 
 function App(){
+  
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800, 
+      once: true,    
+      offset: 100,  
+    });
+  }, []);
+
   return (
       <>
-
-
         <ProductContext.Provider value={camisetas}>
             <CartProvider>
                 <Routes>
@@ -27,6 +40,5 @@ function App(){
       </>
   )
 }
-
 
 export default App

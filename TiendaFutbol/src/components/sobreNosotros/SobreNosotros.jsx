@@ -3,7 +3,8 @@ import styles from './sobreNosotros.module.css';
 function SobreNosotros() {
   return (
     <div>
-      <section className={styles.about} style={{ backgroundColor:"#343a40" }}>
+      
+      <section className={styles.about} style={{ backgroundColor:"#343a40" }} data-aos="fade-up">
         <div className={styles.aboutContainer}>
           <h2 className={styles.titulo} style={{color:'white'}}>Tienda Fútbol</h2>
           <p className={styles.texto} style={{color:'white'}}> 
