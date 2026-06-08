@@ -5,7 +5,7 @@ import SobreNosotros from "../components/sobreNosotros/SobreNosotros.jsx";
 
 function Inicio() {
   return (
-    <div>
+    <div className="container-fluid p-0">
         <Navar1 />
         <Banner/>
         <SobreNosotros/>

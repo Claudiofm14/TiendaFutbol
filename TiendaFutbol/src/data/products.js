@@ -19,89 +19,102 @@ import tigre from '../assets/images/tigre/titular.jpeg'
         nombre: 'BOCA',
         urlImagenTitular: boca,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 2,
         nombre: 'RIVER',
         urlImagenTitular: river ,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 3,
         nombre: 'ARGENTINOS',
         urlImagenTitular: argentinos,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 4, nombre: 'RACING',
         urlImagenTitular: racing,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 5, nombre: 'SAN LORENZO',
         urlImagenTitular: sanLorenzo,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 6,
         nombre: 'INDEPENDIENTE',
         urlImagenTitular: independiente,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 7,
         nombre: 'HURACAN',
         urlImagenTitular: huracan,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 8,
         nombre: 'VELEZ',
         urlImagenTitular: velez,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 9,
         nombre: 'NEWELLS',
         urlImagenTitular: newells,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 10,
         nombre: 'ROSARIO CENTRAL',
         urlImagenTitular: rosarioCentral,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 11,
         nombre: 'GIMNASIA',
         urlImagenTitular: gimnasia,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 12,
         nombre: 'TIGRE',
         urlImagenTitular: tigre,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     },
     {
         id: 13,
         nombre: 'ESTUDIANTES',
         urlImagenTitular: estudiantes,
         precio: 10000,
-        stock: 10
+        stock: 10,
+        categoria: 'indumentaria'
     }
 
 ]

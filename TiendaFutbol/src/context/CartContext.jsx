@@ -1,4 +1,5 @@
 import {createContext, useState} from "react";
+import Swal from "sweetalert2"
 
 export const CartContext = createContext();
 
@@ -47,7 +48,6 @@ export function CartProvider({ children }) {
     }
 
     const actualizarCantidad = (id, nuevaCantidad) => {
-        // Formateamos el número para evitar errores
         const cantidadNumerica = parseInt(nuevaCantidad);
 
         const carritoActualizado = carrito.map(item => {
@@ -67,10 +67,21 @@ export function CartProvider({ children }) {
 
 
 
-    const realizarCompra = () => {
-        alert( "¡Compra realizada con éxito!");
-        vaciarCarrito();
-    }
+   const realizarCompra = () => {
+    Swal.fire({
+        title: '¡Compra realizada con éxito!',
+        text: 'Gracias por tu compra.',
+        icon: 'success', 
+        confirmButtonText: 'Vuelva prontos',
+        confirmButtonColor: '#0d6efd', 
+        background: '#1f2937', 
+        color: '#ffffff'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            vaciarCarrito();
+        }
+    });
+};
     
     return (
         <CartContext.Provider value={{ contador, carrito, busqueda, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra,obtenerDatos,busquedaActual,limpiarBuscador, actualizarCantidad }}>

@@ -10,6 +10,9 @@ function Carrito() {
 
     const { carrito, vaciarCarrito, realizarCompra,limpiarBuscador, actualizarCantidad } = useContext(CartContext);
 
+    const totalProductos = carrito.reduce((acumulador, producto) => {
+        return acumulador +  producto.cantidad;
+    }, 0);
 
     const totalPrecio = carrito.reduce((acumulador, producto) => {
         return acumulador + (producto.precio * producto.cantidad);
@@ -69,6 +72,12 @@ function Carrito() {
                                                             <Card.Text className="text-muted mb-0 font-monospace">
                                                                 Cantidad: {producto.cantidad}
                                                             </Card.Text>
+                                                            <Card.Text>
+                                                                Precio por unidad: {producto.precio}
+                                                            </Card.Text>
+                                                            <Card.Text>
+                                                                Subtotal: {producto.precio * producto.cantidad}
+                                                            </Card.Text>
                                                         </div>
                                                     </Card.Body>
                                                 </Col>
@@ -82,7 +91,7 @@ function Carrito() {
 
                         {carrito.length > 0 && (
                             <div className="mt-4 pt-4 border-top text-start">
-
+                                <h3 className="mb-4 fw-bold">Total de productos: {totalProductos}</h3>
                                 <h3 className="mb-4 fw-bold">Total a pagar: ${totalPrecio}</h3>
                                 
 

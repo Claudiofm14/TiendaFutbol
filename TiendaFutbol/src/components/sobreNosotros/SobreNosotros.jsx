@@ -3,15 +3,13 @@ import styles from './sobreNosotros.module.css';
 function SobreNosotros() {
   return (
     <div>
-      {/* 2. Usá el objeto styles para aplicar las clases */}
-      <section className={styles.about}>
+      <section className={styles.about} style={{ backgroundColor:"#343a40" }}>
         <div className={styles.aboutContainer}>
-          <h2 className={styles.titulo}>El Potrero Store</h2>
-          <p>
-            El Potrero Store es una tienda online dedicada a la venta de camisetas
+          <h2 className={styles.titulo} style={{color:'white'}}>Tienda Fútbol</h2>
+          <p className={styles.texto} style={{color:'white'}}> 
+            Somos una tienda online dedicada a la venta de camisetas y botines
             de fútbol para apasionados del deporte. Ofrecemos una amplia variedad de
-            modelos inspirados en clubes y selecciones de distintas partes del mundo,
-            combinando calidad, estilo y accesibilidad.
+            modelos inspirados en clubes, combinando calidad, estilo y accesibilidad.
           </p>
         </div>
       </section>
