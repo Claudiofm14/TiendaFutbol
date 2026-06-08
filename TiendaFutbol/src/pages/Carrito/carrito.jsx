@@ -29,10 +29,10 @@ function Carrito() {
                         <h2 className="mb-4 text-start">Carrito de Compras</h2>
 
                         {carrito.length === 0 ? (
-                            <div className="text-start p-5 border rounded bg-light">
+                            <div className="text-center p-5 border rounded bg-light align-content-center">
                                 <h4>Tu carrito está vacío</h4>
-                                <p>¡Anda a la tienda y agrega algunos productos!</p>
-                                <Button as={Link} to="/camisetasClubes" variant="dark" onClick={()=> limpiarBuscador()}>Comprar</Button>
+                                <p style={{ marginBottom: "50px" }}>¡Anda a la tienda y agrega algunos productos!</p>
+                                <Button as={Link} to="/camisetasClubes" variant="dark" onClick={()=> limpiarBuscador()} className={"rounded-pill py-3 fw-bold"}>Seguir Comprando</Button>
                             </div>
                         ) : (
                             <Row className="flex-column m-0">

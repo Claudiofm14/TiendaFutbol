@@ -130,11 +130,11 @@ function CamisetasClubes() {
                     )}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowModal(false)}>
+                    <Button variant="light" onClick={() => setShowModal(false)}>
                         Cerrar
                     </Button>
                     <Button 
-                        variant="primary"
+                        variant="dark"
                         disabled={productoSeleccionado && getStockDisponible(productoSeleccionado) <= 0}
                         onClick={() => {
                             if (productoSeleccionado) {

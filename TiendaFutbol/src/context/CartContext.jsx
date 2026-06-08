@@ -72,10 +72,10 @@ export function CartProvider({ children }) {
         title: '¡Compra realizada con éxito!',
         text: 'Gracias por tu compra.',
         icon: 'success', 
-        confirmButtonText: 'Vuelva prontos',
-        confirmButtonColor: '#0d6efd', 
-        background: '#1f2937', 
-        color: '#ffffff'
+        confirmButtonText: 'Cerrar',
+        confirmButtonColor: '#000000',
+        background: '#ffffff',
+        color: '#000000'
     }).then((result) => {
         if (result.isConfirmed) {
             vaciarCarrito();

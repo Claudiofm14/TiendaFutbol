@@ -10,7 +10,7 @@
 }
 
 .searchInput:focus {
-  border-color: #0076ce;
+  border-color: #000000;
   box-shadow: none;
   background-color: #fff;
 }

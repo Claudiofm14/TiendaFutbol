@@ -1,5 +1,5 @@
 import {useContext, useState} from 'react';
-import { Navbar, Nav, Container, Form, InputGroup, Modal, Button, Alert } from 'react-bootstrap';
+import { Navbar, Nav, Container, Form,  Modal, Button, Alert } from 'react-bootstrap';
 import styles from './Nav.module.css';
 import logo from '../../assets/images/nombreTienda.png'
 import { NavLink, useNavigate } from "react-router-dom";
@@ -57,7 +57,7 @@ function Navar1() {
       
       {mostrarAlerta && (
         <Alert 
-          variant="success" 
+          variant="success"
           onClose={() => setMostrarAlerta(false)} 
           dismissible
           style={{
@@ -200,7 +200,7 @@ function Navar1() {
             <Form.Group className="mb-3" controlId="formMensaje">
               <Form.Label>Mensaje o Consulta</Form.Label>
               <Form.Control 
-                required 
+                required
                 as="textarea" 
                 rows={3} 
                 placeholder="¿En qué te podemos ayudar?" 
@@ -212,7 +212,7 @@ function Navar1() {
               </Form.Control.Feedback>
             </Form.Group>
             
-            <Button type="submit" variant="primary" className="w-100">
+            <Button type="submit" variant="dark" className="w-100">
               Enviar Mensaje
             </Button>
           </Form>
