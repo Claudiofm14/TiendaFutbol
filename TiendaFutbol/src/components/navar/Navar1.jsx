@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import {useContext, useState} from 'react';
 import { Navbar, Nav, Container, Form, InputGroup, Modal, Button, Alert } from 'react-bootstrap';
 import styles from './Nav.module.css';
 import logo from '../../assets/images/nombreTienda.png'
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router-dom";
+import {ProductContext} from "../../context/ProductContext.jsx";
+import{ Typeahead} from "react-bootstrap-typeahead";
+import 'react-bootstrap-typeahead/css/Typeahead.css'
 import ButtonCarrito from "../ButtonCarrito/ButtonCarrito.jsx";
 
 function Navar1() {
@@ -45,7 +48,9 @@ function Navar1() {
       }, 4000);
     }
   };
-
+  const productos = useContext(ProductContext);
+  const [selected, setSelected] = useState([]);
+  const navigate = useNavigate();
   return (
     <header className={styles.headerContainer}>
       
@@ -84,19 +89,43 @@ function Navar1() {
               </div>
             </div>
 
-            
-            <div className="col-12 col-lg-6 mb-3 mb-lg-0 d-flex justify-content-center">
-              <div className={`${styles.searchArea} w-100`}>
-                <InputGroup className="w-100">
-                  <Form.Control
-                    placeholder="¿Qué estás buscando?"
-                    aria-label="Buscar"
-                    className={styles.searchInput}
-                  />
-                  <InputGroup.Text className={styles.searchIcon} style={{ cursor: 'pointer' }}>
-                    <i className="bi bi-search"> buscar </i> 
-                  </InputGroup.Text>
-                </InputGroup>
+
+
+            <div className="col-12 col-lg-6 mb-3 mb-lg-0 d-flex justify-content-center align-items-center">
+              <div className="w-75">
+                <Typeahead
+                    id="buscador-productos"
+                    labelKey="nombre"
+                    options={productos}
+                    minLength={1}
+                    placeholder="Buscar equipo..."
+                    onChange={(selecciones) => {
+                      setSelected(selecciones);
+                      if (selecciones.length > 0) {
+                        const idProducto = selecciones[0].id;
+                        navigate(`/producto/${idProducto}`);
+                        setSelected([]);
+                      }
+                    }}
+                    selected={selected}
+                    emptyLabel="No se encontraron equipos"
+                    renderMenuItemChildren={(opcion) => (
+                        <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+                          <img
+                              alt={opcion.nombre}
+                              src={opcion.urlImagenTitular}
+                              style={{
+                                height: '35px',
+                                marginRight: '10px',
+                                borderRadius: '5px'
+                              }}
+                          />
+                          <div>
+                            <span style={{ fontWeight: '500' }}>{opcion.nombre}</span>
+                          </div>
+                        </div>
+                    )}
+                />
               </div>
             </div>
 
