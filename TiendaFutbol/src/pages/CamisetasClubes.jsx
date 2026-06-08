@@ -55,10 +55,10 @@ function CamisetasClubes() {
 
                                 <Card.Body className="d-flex flex-column justify-content-between">
                                     <div>
-                                        <Card.Title className="text-uppercase fs-5">{producto.nombre}</Card.Title>
-                                        <Card.Text className="fw-bold text-muted">${producto.precio}</Card.Text>
+                                        <Card.Title className="text-uppercase fs-5 text-center">{producto.descripcion}</Card.Title>
+                                        <Card.Text className="fw-bold text-muted text-center">${producto.precio}</Card.Text>
                                     </div>
-                                    <div>
+                                    <div className={"mt-3 d-flex justify-content-center gap-2"}>
                                         
                                         <span
                                             onClick={() => {
@@ -68,7 +68,7 @@ function CamisetasClubes() {
                                             style={{
                                                 background: 'none',
                                                 border: 'none',
-                                                color: '#00d2ff',
+                                                color: '#212529',
                                                 cursor: 'pointer',
                                                 padding: '0 5px',
                                                 fontWeight: 'bold',
@@ -84,7 +84,7 @@ function CamisetasClubes() {
                                         </div>
 
                                         <Button
-                                            variant={getStockDisponible(producto) <= 0 ? "secondary" : "primary"}
+                                            variant={getStockDisponible(producto) <= 0 ? "secondary" : "outline-dark"}
                                             className="w-100"
                                             disabled={getStockDisponible(producto) <= 0}
                                             onClick={() => {

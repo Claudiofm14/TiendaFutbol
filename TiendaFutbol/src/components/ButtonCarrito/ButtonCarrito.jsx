@@ -69,7 +69,7 @@ function ButtonCarrito() {
                 className={styles.cartBtn}
                 onClick={() => navigate('/carrito')}
             >
-                <Cart size={20} />
+                <Cart size={24} color="white" />
                 <Contador />
             </button>
         </OverlayTrigger>

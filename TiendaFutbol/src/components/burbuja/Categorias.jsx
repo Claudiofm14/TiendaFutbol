@@ -152,7 +152,7 @@ const Categorias = () => {
           </Modal.Body>
           <Modal.Footer className="border-0 p-4 pt-0">
               <Button 
-                  variant="primary"
+                  variant="outline-dark"
                   className="w-100 py-2 fw-bold text-uppercase"
                   style={{ fontSize: '0.9rem', letterSpacing: '0.5px' }}
                   disabled={productoSeleccionado && getStockDisponible(productoSeleccionado) <= 0}

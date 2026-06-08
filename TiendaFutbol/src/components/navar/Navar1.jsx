@@ -68,7 +68,7 @@ function Navar1() {
         </Alert>
       )}
 
-      <div className={styles.topHeader}>
+      <div>
         <Container fluid="xl" className="py-3">
           <div className="row align-items-center justify-content-center w-100 m-0">
 

@@ -12,7 +12,7 @@ function Header() {
       const {limpiarBuscador } = useContext(CartContext);
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary me-auto">
+    <Navbar expand="lg" className="bg-dark me-auto" variant={"dark"}>
       <Container >
         <Navbar.Brand href="#home">Tienda Fútbol</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

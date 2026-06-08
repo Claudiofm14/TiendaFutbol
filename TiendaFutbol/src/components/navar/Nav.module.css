@@ -1,12 +1,10 @@
 .headerContainer {
   width: 100%;
   font-family: 'Roboto', sans-serif; /* O la tipografía que uses en tu app */
-  background-color: #343a40;
+  background-color: #212529;
 }
 
-.topHeader {
-  border-bottom: 1px solid #e5e7eb;
-}
+
 
 /* Buscador */
 .searchArea {
@@ -64,9 +62,9 @@
   transition: color 0.3s ease, background-color 0.3s ease ,border-color 0.3s ease, transform 0.2s ease;
 }
 .loginBtn:hover {
-  background-color: #e2e8f0;
-  border: 1px solid #0076ce;
-  color: #0076ce;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
 
 
 }

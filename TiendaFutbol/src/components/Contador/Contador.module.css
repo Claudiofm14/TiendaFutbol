@@ -2,7 +2,7 @@
     position: absolute;
     top: -4px;
     right: -4px;
-    background-color: #dc3545; /* Rojo típico para notificaciones */
+    background-color: #dc3545;
     color: white;
     border-radius: 50px;
     min-width: 22px;
@@ -12,6 +12,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid white; /* Borde blanco para que resalte y se recorte con el botón verde */
+    border: 2px solid white;
     padding: 0 4px;
 }

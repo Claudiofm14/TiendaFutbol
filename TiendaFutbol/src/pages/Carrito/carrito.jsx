@@ -32,7 +32,7 @@ function Carrito() {
                             <div className="text-start p-5 border rounded bg-light">
                                 <h4>Tu carrito está vacío</h4>
                                 <p>¡Anda a la tienda y agrega algunos productos!</p>
-                                <Button as={Link} to="/camisetasClubes" variant="success" onClick={()=> limpiarBuscador()}>Comprar</Button>
+                                <Button as={Link} to="/camisetasClubes" variant="dark" onClick={()=> limpiarBuscador()}>Comprar</Button>
                             </div>
                         ) : (
                             <Row className="flex-column m-0">
@@ -105,7 +105,7 @@ function Carrito() {
                                     </Button>
                                     
                                     <Button 
-                                        variant="success" 
+                                        variant="dark"
                                         size="lg" 
                                         className="px-5 shadow-sm"
                                         onClick={() => realizarCompra()}
