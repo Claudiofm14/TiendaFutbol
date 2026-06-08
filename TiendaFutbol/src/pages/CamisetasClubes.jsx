@@ -4,6 +4,7 @@ import { ProductContext } from "../context/ProductContext.jsx";
 import { Alert, Card, Col, Modal, Button, Container, Row } from "react-bootstrap";
 import { CartContext } from "../context/CartContext.jsx";
 import Buscador from "../components/Busqueda/Buscador.jsx";
+import Footer from "../components/footer/Footer.jsx";
 
 function CamisetasClubes() {
     const productos = useContext(ProductContext);
@@ -148,7 +149,12 @@ function CamisetasClubes() {
                     </Button>
                 </Modal.Footer>
             </Modal>
+            <div>
+
+            <Footer />
+            </div>
         </div>
+
     );
 }
 
