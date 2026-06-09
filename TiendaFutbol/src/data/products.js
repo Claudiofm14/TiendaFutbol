@@ -137,6 +137,46 @@ export const zapatillas = [
     {
         id: 1,
         marca:"Nike",
-        nombre:"Nike Pegasus Plus"
+        nombre:"Nike Pegasus Plus",
+        categoria:"Zapatillas de Running para Hombre",
+        precio:369999,
+        descuento:0.3,
+        precioOferta: this.precio - (this.precio * this.descuento),
+        urlImagenTitular: nikePegasusPlus,
+        stock: 10
+    },
+    {
+        id: 2,
+        marca: "Jordan",
+        nombre: "Jordan CMFT Era",
+        categoria: "Zapatillas Jordan para Mujer",
+        precio:269999,
+        descuento: 0.35,
+        precioOferta: this.precio - (this.precio * this.descuento),
+        imagenUrl: jordanCMFT
+    },
+
+    {
+        id: 3,
+        marca: "Adidas",
+        nombre: "Adidas CourtBlock Azul",
+        categoria: "Zapatillas Adidas para Hombre",
+        precio:149999,
+        descuento: 0.20,
+        precioOferta: this.precio - (this.precio * this.descuento),
+        imagenUrl: adidasCourtBlockAzul
+    },
+    {
+        id: 4,
+        marca: "Adidas",
+        nombre: "Adidas Runner 2",
+        categoria: "Zapatillas Adidas para Hombre",
+        precio:199999,
+        descuento: 0.50,
+        precioOferta: this.precio - (this.precio * this.descuento),
+        imagenUrl: adidasRunner2
     }
+
+
+
 ]
