@@ -13,6 +13,12 @@ import gimnasia from '../assets/images/gimnasia/titular.jpeg'
 import tigre from '../assets/images/tigre/titular.jpeg'
 
 
+import adidasCourtBlockAzul from '../assets/images/zapatillas/adidas_courtblock_azul.png'
+import adidasRunner2 from '../assets/images/zapatillas/adidas_runner2.png'
+import jordanCMFT from '../assets/images/zapatillas/JordanCMFT.png'
+import nikePegasusPlus from '../assets/images/zapatillas/nike_pegasus_plus.png'
+
+
  const productos= [
     {
         id: 1,
@@ -125,3 +131,12 @@ export const camisetas=productos.map(producto => ({
   caracteristicas:`100% algodón`  
 
 }));
+
+
+export const zapatillas = [
+    {
+        id: 1,
+        marca:"Nike",
+        nombre:"Nike Pegasus Plus"
+    }
+]
