@@ -18,8 +18,11 @@ function DetalleProducto() {
     }
     const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
     const outOfStockSizes = ['XS']
-    const {agregarAlCarrito, agregarProductoAlCarrito} = useContext(CartContext);
-
+    const {agregarAlCarrito, agregarProductoAlCarrito, carrito} = useContext(CartContext);
+    const productoEnCarrito = carrito.find(item => item.id === producto.id)
+    const cantidadYaEnCarrito = productoEnCarrito ? productoEnCarrito.cantidad : 0
+    const stockDisponible = producto.stock - cantidadYaEnCarrito
+    const estaAgotado = stockDisponible <= 0
 
     return (
         <>
@@ -48,13 +51,13 @@ function DetalleProducto() {
 
                         <h3 className="fw-bold my-3">${producto.precio.toLocaleString('es-AR')}</h3>
                         <p className="text-muted small mb-4">Precio sin impuestos
-                            nacionales {producto.precio - 20000}</p>
+                            nacionales {'$' + (producto.precio - 20000).toLocaleString('es-AR')}</p>
 
 
                         <div className="mb-4">
                             <div className="d-flex justify-content-between align-items-center mb-2">
                                 <span className="fw-bold">Seleccionar Talle</span>
-                                <span className="text-muted small">Stock disponible: {producto.stock}</span>
+                                <span className="text-muted small">Stock disponible: {stockDisponible}</span>
                             </div>
 
                             <Row className="g-2">
@@ -94,14 +97,16 @@ function DetalleProducto() {
                                 variant="dark"
                                 size="lg"
                                 className="rounded-pill py-3 fw-bold"
-                                style={{ backgroundColor: '#000', border: 'none' }}
+                                style={{ backgroundColor: estaAgotado ? '#ccc' : '#000', border: 'none' }}
                                 onClick={() => {
-                                    agregarAlCarrito()
-                                    agregarProductoAlCarrito(producto)
+                                    if(!estaAgotado) {
+                                        agregarAlCarrito()
+                                        agregarProductoAlCarrito(producto)
+                                    }
 
                                 }}
                             >
-                                Agregar al Carrito
+                                {estaAgotado ? 'Agotado' :'Agregar al Carrito'}
                             </Button>
 
                             <Button

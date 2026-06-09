@@ -28,6 +28,9 @@ export function CartProvider({ children }) {
         
         const productoExistente = carrito.find(item => item.id === producto.id);
         if (productoExistente) {
+            if(productoExistente.cantidad >= producto.stock){
+                return
+            }
             const carritoActualizado = carrito.map(item => {
 
                 if (item.id === producto.id) {
