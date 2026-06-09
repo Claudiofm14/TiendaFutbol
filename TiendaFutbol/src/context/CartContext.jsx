@@ -65,7 +65,12 @@ export function CartProvider({ children }) {
     };
 
 
-
+    const eliminarProducto = (id) => {
+        const carritoActualizado = carrito.filter(item => item.id !== id);
+        setCarrito(carritoActualizado);
+        const nuevoContador = carritoActualizado.reduce((acc, item) => acc + item.cantidad, 0);
+        setContador(nuevoContador);
+    };
 
    const realizarCompra = () => {
     Swal.fire({
@@ -84,7 +89,7 @@ export function CartProvider({ children }) {
 };
     
     return (
-        <CartContext.Provider value={{ contador, carrito, busqueda, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra,obtenerDatos,busquedaActual,limpiarBuscador, actualizarCantidad }}>
+        <CartContext.Provider value={{ contador, carrito, busqueda,eliminarProducto, agregarAlCarrito, agregarProductoAlCarrito, vaciarCarrito, realizarCompra,obtenerDatos,busquedaActual,limpiarBuscador, actualizarCantidad }}>
             {children}
         </CartContext.Provider>
     );

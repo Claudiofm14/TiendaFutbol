@@ -4,6 +4,6 @@
   will-change: transform, box-shadow;
 }
 .columna:hover img {
-  box-shadow: 0px 12px 30px 0px rgba(38, 37, 37, 0.5); 
+  box-shadow: 1px 12px 30px 0px rgba(0, 0, 0, 0.5); 
   transform: scale(1.1); 
 }

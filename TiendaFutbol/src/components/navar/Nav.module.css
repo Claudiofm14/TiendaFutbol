@@ -1,12 +1,11 @@
 .headerContainer {
   width: 100%;
-  font-family: 'Roboto', sans-serif; /* O la tipografía que uses en tu app */
+  font-family: 'Roboto', sans-serif;
   background-color: #212529;
 }
 
 
 
-/* Buscador */
 .searchArea {
   width: 45%;
 }
@@ -31,7 +30,6 @@
   cursor: pointer;
 }
 
-/* Área de usuario e iconos */
 .userArea {
   display: flex;
   align-items: center;
@@ -95,9 +93,9 @@
   text-align: center;
 }
 
-/* BARRA DE MENÚ AZUL */
+
 .mainNavbar {
-  background-color: #000 !important; /* El color azul Francia de la foto */
+  background-color: #000 !important; 
   padding: 0 !important;
 }
 
@@ -114,7 +112,6 @@
   border-bottom: 1px solid white;
 }
 
-/* Adaptación para el menú colapsable en celulares */
 @media (max-width: 991px) {
   .searchArea {
     width: 100%;

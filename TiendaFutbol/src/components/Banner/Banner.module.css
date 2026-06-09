@@ -1,6 +1,6 @@
 .hero {
-  height: 70vh; /* Ocupa el 70% del alto de la pantalla actual */
-  min-height: 500px; /* Evita que se achique demasiado en pantallas muy anchas pero bajas */
+  height: 70vh;
+  min-height: 500px; 
   width: 100%;
   position: relative;
   isolation: isolate;
