@@ -1,14 +1,14 @@
-import { useParams, useNavigate } from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import {useContext, useState} from "react";
-import { ProductContext } from "../context/ProductContext.jsx";
-import { CartContext } from "../context/CartContext.jsx";
-import { Button, Container, Row, Col, Image } from "react-bootstrap";
-import Header from "../components/Header.jsx";
-
+import {ProductContext} from "../../context/ProductContext.jsx";
+import {CartContext} from "../../context/CartContext.jsx";
+import {Button, Container, Row, Col, Image} from "react-bootstrap";
+import Header from "../../components/Header.jsx";
+import TarjetaCuotaInfo from "../../components/TrajetaCuotasInfo/TarjetaCuotaInfo.jsx";
 
 
 function DetalleProducto() {
-    const { id } = useParams();
+    const {id} = useParams();
     const navigate = useNavigate();
     const productos = useContext(ProductContext);
     const producto = productos.find(p => p.id === parseInt(id));
@@ -16,26 +16,26 @@ function DetalleProducto() {
     if (!producto) {
         return <h2 className="text-white text-center mt-5">Producto no encontrado</h2>;
     }
-    const sizes = ["XS","S", "M", "L", "XL", "XXL"];
+    const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
     const outOfStockSizes = ['XS']
-    const { agregarAlCarrito, agregarProductoAlCarrito} = useContext(CartContext);
+    const {agregarAlCarrito, agregarProductoAlCarrito} = useContext(CartContext);
 
 
     return (
         <>
-        <Header></Header>
+            <Header></Header>
             <Container className="my-5">
                 <Row>
 
                     <Col lg={7} md={12} className="mb-4">
                         <div
                             className="d-flex justify-content-center align-items-center h-100"
-                            style={{ backgroundColor: '#f6f6f6', borderRadius: '8px', padding: '20px' }}
+                            style={{backgroundColor: '#f6f6f6', borderRadius: '8px', padding: '20px'}}
                         >
                             <Image
                                 src={producto.urlImagenTitular}
                                 fluid
-                                style={{  width: '100%', maxHeight: '400px', objectFit: 'contain'}}
+                                style={{width: '100%', maxHeight: '400px', objectFit: 'contain'}}
                                 alt={producto.descripcionCompleta}
                             />
                         </div>
@@ -47,8 +47,8 @@ function DetalleProducto() {
                         <p className="text-muted small">{producto.descripcionCompleta}</p>
 
                         <h3 className="fw-bold my-3">${producto.precio.toLocaleString('es-AR')}</h3>
-                        <p className="text-muted small mb-4">Precio sin impuestos nacionales {producto.precio - 20000}</p>
-
+                        <p className="text-muted small mb-4">Precio sin impuestos
+                            nacionales {producto.precio - 20000}</p>
 
 
                         <div className="mb-4">
@@ -79,6 +79,7 @@ function DetalleProducto() {
                                             >
                                                 {size}
                                             </Button>
+
                                         </Col>
                                     );
                                 })}
@@ -111,6 +112,7 @@ function DetalleProducto() {
                             >
                                 Volver a la tienda
                             </Button>
+                            <TarjetaCuotaInfo/>
                         </div>
                     </Col>
                 </Row>

@@ -3,11 +3,13 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext.jsx";
 import { Alert, Card, Col, Modal, Button, Container, Row } from "react-bootstrap";
 import { CartContext } from "../context/CartContext.jsx";
+import {useNavigate} from "react-router-dom";
 import Buscador from "../components/Busqueda/Buscador.jsx";
 import Footer from "../components/footer/Footer.jsx";
 
 function CamisetasClubes() {
     const productos = useContext(ProductContext);
+    const navigate = useNavigate();
     const { carrito, agregarAlCarrito, agregarProductoAlCarrito, busquedaActual } = useContext(CartContext);
 
     
@@ -50,8 +52,8 @@ function CamisetasClubes() {
                         <Col key={producto.id} xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center" data-aos="fade-up">
                             <Card style={{ width: '100%', maxWidth: '18rem' }} className="h-100 shadow-sm">
                                 
-                                <div style={{ height: '250px', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <Card.Img style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} variant="top" src={producto.urlImagenTitular} />
+                                <div style={{ height: '250px', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor:'pointer'}} onClick={() => navigate(`/producto/${producto.id}`)}>
+                                    <Card.Img style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} variant="top" src={producto.urlImagenTitular}/>
                                 </div>
 
                                 <Card.Body className="d-flex flex-column justify-content-between">

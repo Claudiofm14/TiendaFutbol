@@ -152,7 +152,7 @@ function Navar1() {
           <Navbar.Collapse id="main-nav">
             <Nav className="w-100 d-flex justify-content-start gap-3">
               <Nav.Link as={NavLink} to="/camisetasClubes" className={styles.navLinkItem}>CLUBES</Nav.Link>
-              <Nav.Link as={NavLink} to="/mujeres" className={styles.navLinkItem}>SELECCIONES</Nav.Link>
+              <Nav.Link as={NavLink} to="/selecciones" className={styles.navLinkItem}>SELECCIONES</Nav.Link>
               <Nav.Link as={NavLink} to="/deportes" className={styles.navLinkItem}>DEPORTES</Nav.Link>
               <Nav.Link as={NavLink} to="#ofertas" className={styles.navLinkItem}>OFERTAS</Nav.Link>
             </Nav>

@@ -11,7 +11,10 @@ import {Route, Routes} from "react-router-dom";
 import {CartProvider} from "./context/CartContext.jsx";
 import CamisetasClubes from "./pages/CamisetasClubes.jsx";
 import Contacto from "./pages/contacto/Contacto.jsx";
-import DetalleProducto from "./pages/DetalleProducto.jsx";
+import DetalleProducto from "./pages/DetalleProducto/DetalleProducto.jsx";
+import Nosotros from "./pages/Nosotros/Nosotros.jsx";
+import Selecciones from "./pages/Selecciones/Selecciones.jsx";
+import Error404 from "./pages/Error 404/Error404.jsx";
 
 function App(){
   
@@ -34,6 +37,10 @@ function App(){
                     <Route path="/carrito" element={<Carrito/>} />
                     <Route path="/contacto" element={<Contacto/>} />
                     <Route path="/producto/:id" element={<DetalleProducto/>}/>
+                    <Route path="/nosotros" element={<Nosotros/>}/>
+                    <Route path="/selecciones" element={<Selecciones/>}/>
+                    <Route path={"*"} element={<Error404/>} />
+
                 </Routes>
             </CartProvider>
         </ProductContext.Provider>

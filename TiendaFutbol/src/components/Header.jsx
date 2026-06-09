@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {NavLink} from "react-router";
+import {NavLink} from "react-router-dom";
 import ButtonCarrito from "./ButtonCarrito/ButtonCarrito.jsx";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext.jsx";
@@ -12,9 +12,11 @@ function Header() {
       const {limpiarBuscador } = useContext(CartContext);
 
   return (
-    <Navbar expand="lg" className="bg-dark me-auto" variant={"dark"}>
+    <Navbar expand="lg" className="bg-dark me-auto sticky-top" variant={"dark"}>
       <Container >
-        <Navbar.Brand href="#home">Tienda Fútbol</Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/">
+          Tienda Fútbol
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -26,7 +28,9 @@ function Header() {
             </Nav.Link>
 
             <NavDropdown title="Menu" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Nosotros</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/nosotros">
+                Nosotros
+              </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/contacto">
                Contacto
               </NavDropdown.Item>

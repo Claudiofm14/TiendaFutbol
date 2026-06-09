@@ -185,7 +185,7 @@ function Formulario(){
                 </Form.Group>
 
 
-                <Button variant="primary" type="submit" className="w-100 py-2 fw-bold" style={{ backgroundColor: '#0076ce' }}>
+                <Button variant="dark" type="submit" className="w-100 py-2 fw-bold">
                     Enviar Consulta
                 </Button>
 
