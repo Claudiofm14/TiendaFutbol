@@ -40,14 +40,14 @@ import nikePegasusPlus from '../assets/images/zapatillas/nike_pegasus_plus.png'
         id: 3,
         nombre: 'ARGENTINOS',
         urlImagenTitular: argentinos,
-        precio: 219999,
+        precio: 2199,
         stock: 10,
         categoria: 'indumentaria'
     },
     {
         id: 4, nombre: 'RACING',
         urlImagenTitular: racing,
-        precio: 219999,
+        precio: 2999,
         stock: 10,
         categoria: 'indumentaria'
     },

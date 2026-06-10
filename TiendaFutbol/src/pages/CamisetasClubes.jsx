@@ -6,6 +6,7 @@ import { CartContext } from "../context/CartContext.jsx";
 import {useNavigate} from "react-router-dom";
 import Buscador from "../components/Busqueda/Buscador.jsx";
 import Footer from "../components/footer/Footer.jsx";
+import DropdownFilter from "../components/dropdown/DropdownFilter.jsx";
 
 function CamisetasClubes() {
     const productos = useContext(ProductContext);
@@ -15,8 +16,19 @@ function CamisetasClubes() {
     
     const [showModal, setShowModal] = useState(false);
     const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+    const [orden, setOrden] = useState("Destacados");
 
     const productosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(busquedaActual().trim().toLowerCase()))
+
+    const productosOrdenados = [...productosFiltrados].sort((a, b) => {
+        if (orden === "Precio - Menor a Mayor") {
+            return a.precio - b.precio; 
+        }
+        if (orden === "Precio - Mayor a Menor") {
+            return b.precio - a.precio; 
+        }
+        return 0; 
+    });
 
     const getStockDisponible = (producto) => {
         const itemEnCarrito = carrito.find(item => item.id === producto.id);
@@ -39,16 +51,17 @@ function CamisetasClubes() {
             <section className="d-flex justify-content-center w-100 my-4">
                 <div className="w-75 w-md-50">
                     <Buscador />
+                    <DropdownFilter orden={orden} setOrden={setOrden}/>
                 </div>
             </section>
 
             <section>
-                {productosFiltrados.length === 0 && <Alert variant="warning" className="text-center mx-auto shadow-sm"> Producto no encontrado </Alert>}
+                {productosOrdenados.length === 0 && <Alert variant="warning" className="text-center mx-auto shadow-sm"> Producto no encontrado </Alert>}
             </section>
 
             <Container className="mt-5">
                 <Row className="g-4 justify-content-center">
-                    {productosFiltrados.map((producto) => (
+                    {productosOrdenados.map((producto) => (
                         <Col key={producto.id} xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center" data-aos="fade-up">
                             <Card style={{ width: '100%', maxWidth: '18rem' }} className="h-100 shadow-sm">
                                 

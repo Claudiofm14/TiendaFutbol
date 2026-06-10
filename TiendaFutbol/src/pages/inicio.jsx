@@ -4,6 +4,7 @@ import Burbujas from "../components/burbuja/Burbujas.jsx";
 import SobreNosotros from "../components/sobreNosotros/SobreNosotros.jsx";
 import Footer from "../components/footer/Footer.jsx";
 import BannerCuotas from "../components/BannerCuotas/BannerCuotas.jsx";
+import CarruselCliente from "../components/clientes/CarruselCliente.jsx";
 
 function Inicio() {
   return (
@@ -13,6 +14,7 @@ function Inicio() {
         <BannerCuotas/>
         <SobreNosotros/>
         <Burbujas/>
+        <CarruselCliente/>
         <Footer/>
     </div>
   )

@@ -1,0 +1,67 @@
+.infinite-ticker-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: transparent; 
+}
+
+.ticker-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scrollTicker 45s linear infinite;
+}
+
+@keyframes scrollTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+
+.review-card-type-2 {
+  background-color: #1a1c23;
+  border-radius: 12px;
+  padding: 25px;
+  width: 350px;
+  margin: 0 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.review-card-type-2 p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  min-height: 80px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h6 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.user-info span {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
