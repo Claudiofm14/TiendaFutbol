@@ -57,6 +57,8 @@ pnpm install
 pnpm run dev
 ```
 
+### Ejecutar el proyecto en produccion
+
 ```bash
 pnpm run deployd
 ```
