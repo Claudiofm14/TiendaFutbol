@@ -78,7 +78,7 @@ const TarjetaProducto = ({ producto, navigate, disponibilidadStock, setProductoS
                     </div>
 
                     <Button
-                        variant={getStockDisponible(producto) <= 0 ? "secondary" : "primary"}
+                        variant={getStockDisponible(producto) <= 0 ? "secondary" : "dark"}
                         className="w-100 fw-bold rounded-pill"
                         disabled={getStockDisponible(producto) <= 0}
                         onClick={() => {
