@@ -48,19 +48,19 @@ git clone <URL_DEL_REPOSITORIO>
 ### Instalar dependencias
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### Ejecutar el proyecto en local
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 ### Ejecutar el proyecto en produccion
 
 ```bash
-pnpm run deployd
+npm run deploy
 ```
 
 Una vez iniciado, abrir el navegador en la URL indicada por Vite.
