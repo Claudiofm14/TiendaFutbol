@@ -1,13 +1,34 @@
-import {createContext, useState} from "react";
+import {createContext, useState, useEffect} from "react";
 import Swal from "sweetalert2"
 
 export const CartContext = createContext();
 
 
 export function CartProvider({ children }) {
-    const [contador, setContador] = useState(0);
-    const [carrito, setCarrito] = useState([]);
+    const [contador, setContador] = useState(() =>{
+        try{
+            const carritoGuardado = localStorage.getItem("carrito");
+            const carritoParseado = carritoGuardado ? JSON.parse(carritoGuardado) : []
+            return carritoParseado.reduce((acc, item) => acc + item.cantidad, 0)
+        }catch(error){
+            return 0;
+        }
+    });
+    const [carrito, setCarrito] = useState(() => {
+        try {
+            const carritoGuardado = localStorage.getItem("carrito");
+            return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+        } catch(error){
+            return [];
+        }
+
+    });
     const [busqueda, setBusqueda] = useState("");
+
+    useEffect(() => {
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    },[carrito])
+
 
     const obtenerDatos = (dato) => {
         setBusqueda(dato)
@@ -100,5 +121,3 @@ export function CartProvider({ children }) {
     
 
 }
-
-
