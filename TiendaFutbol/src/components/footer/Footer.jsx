@@ -79,7 +79,7 @@ const Footer = () => {
     };
 
     return (
-        <div style={{ backgroundColor: "#343a40" }} className="text-white pt-5 pb-4 mt-5">
+        <div style={{ backgroundColor: "#343a40" }} className="text-white pt-5 pb-4 mt-0">
             <Container fluid="md">
 
                 <Row className="text-center gy-4 mb-5 justify-content-center">
