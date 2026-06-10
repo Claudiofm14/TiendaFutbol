@@ -11,10 +11,6 @@ import newells from '../assets/images/newell´s/titular.jpeg'
 import rosarioCentral from '../assets/images/rosario central/titular.jpeg'
 import gimnasia from '../assets/images/gimnasia/titular.jpeg'
 import tigre from '../assets/images/tigre/titular.jpeg'
-import adidasCourtBlockAzul from '../assets/images/zapatillas/adidas_courtblock_azul.png'
-import adidasRunner2 from '../assets/images/zapatillas/adidas_runner2.png'
-import jordanCMFT from '../assets/images/zapatillas/JordanCMFT.png'
-import nikePegasusPlus from '../assets/images/zapatillas/nike_pegasus_plus.png'
 import realMadrid from '../assets/images/europa/realtitular.webp'
 import barcelona from '../assets/images/europa/barcelonatitular.webp'
 import arsenal from '../assets/images/europa/arsenaltitular.jpeg'
@@ -29,6 +25,12 @@ import psg from '../assets/images/europa/psgtitular.jpeg'
 import manchester from '../assets/images/europa/manchestertitular.webp'
 import argentinatitular from '../assets/images/seleccion/argentinatitular.webp'
 import argentinasuplente from '../assets/images/seleccion/argentinasuplente.jpeg'
+import AdidasF50ClubTFBlanco from '../assets/images/zapatillas/Adidas_F50_Club_TF_Blanco.jpg'
+import AdidasF50ClubTFNegroAmarillo from '../assets/images/zapatillas/Adidas_F50_Club_TF_Negro_Amarillo_Botin.jpg'
+import AdidasF50ClubTFNegro from '../assets/images/zapatillas/Adidas_F50_Club_TF_Negro_Botines.jpg'
+import AdidasF50MessiClubTFCrudo from '../assets/images/zapatillas/Adidas_F50_Messi_Club_TF_Crudo.jpg'
+import NikeTiempoLegend10Gris from '../assets/images/zapatillas/Botines_NIKE_Gris_Tiempo_Legend_10.jpg'
+import NikePhantomGXIIClubBlanco from '../assets/images/zapatillas/Botines_NIKE_PHANTOM_GX_II_CLUB_Blanco.jpg'
 const productos = [
     {
         id: 1,
@@ -50,7 +52,7 @@ const productos = [
         id: 3,
         nombre: 'ARGENTINOS',
         urlImagenTitular: argentinos,
-        precio: 2199,
+        precio: 219999,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -58,7 +60,7 @@ const productos = [
         id: 4, 
         nombre: 'RACING',
         urlImagenTitular: racing,
-        precio: 2999,
+        precio: 149990,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -66,7 +68,7 @@ const productos = [
         id: 5, 
         nombre: 'SAN LORENZO',
         urlImagenTitular: sanLorenzo,
-        precio: 219999,
+        precio: 120999,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -74,7 +76,7 @@ const productos = [
         id: 6,
         nombre: 'INDEPENDIENTE',
         urlImagenTitular: independiente,
-        precio: 219999,
+        precio: 120999,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -82,7 +84,7 @@ const productos = [
         id: 7,
         nombre: 'HURACAN',
         urlImagenTitular: huracan,
-        precio: 219999,
+        precio: 120999,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -90,7 +92,7 @@ const productos = [
         id: 8,
         nombre: 'VELEZ',
         urlImagenTitular: velez,
-        precio: 219999,
+        precio: 128990,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -98,7 +100,7 @@ const productos = [
         id: 9,
         nombre: 'NEWELLS',
         urlImagenTitular: newells,
-        precio: 219999,
+        precio: 98590,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -106,7 +108,7 @@ const productos = [
         id: 10,
         nombre: 'ROSARIO CENTRAL',
         urlImagenTitular: rosarioCentral,
-        precio: 219999,
+        precio: 178999,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -114,7 +116,7 @@ const productos = [
         id: 11,
         nombre: 'GIMNASIA',
         urlImagenTitular: gimnasia,
-        precio: 219999,
+        precio: 98590,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -122,7 +124,7 @@ const productos = [
         id: 12,
         nombre: 'TIGRE',
         urlImagenTitular: tigre,
-        precio: 219999,
+        precio: 102000,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -130,7 +132,7 @@ const productos = [
         id: 13,
         nombre: 'ESTUDIANTES',
         urlImagenTitular: estudiantes,
-        precio: 219999,
+        precio: 178590,
         stock: 10,
         categoria: 'Clubes Argentinos'
     },
@@ -170,7 +172,7 @@ const productos = [
         id: 18,
         nombre: 'ARSENAL',
         urlImagenTitular: arsenal, 
-        precio: 280000,
+        precio: 250000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -178,7 +180,7 @@ const productos = [
         id: 19,
         nombre: 'LIVERPOOL',
         urlImagenTitular: liverpool, 
-        precio: 280000,
+        precio: 230000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -186,7 +188,7 @@ const productos = [
         id: 20,
         nombre: 'MANCHESTER CITY',
         urlImagenTitular: city, 
-        precio: 280000,
+        precio: 260000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -194,7 +196,7 @@ const productos = [
         id: 21,
         nombre: 'MANCHESTER UNITED',
         urlImagenTitular: manchester, 
-        precio: 280000,
+        precio: 290000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -202,7 +204,7 @@ const productos = [
         id: 22,
         nombre: 'JUVENTUS',
         urlImagenTitular: juventus, 
-        precio: 280000,
+        precio: 240000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -210,7 +212,7 @@ const productos = [
         id: 23,
         nombre: 'INTER DE MILAN',
         urlImagenTitular: inter, 
-        precio: 280000,
+        precio: 200000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -218,7 +220,7 @@ const productos = [
         id: 24,
         nombre: 'MILAN',
         urlImagenTitular: milan, 
-        precio: 280000,
+        precio: 200000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -226,7 +228,7 @@ const productos = [
         id: 25,
         nombre: 'PARIS SAINT GERMAIN',
         urlImagenTitular: psg, 
-        precio: 280000,
+        precio: 240000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -234,7 +236,7 @@ const productos = [
         id: 26,
         nombre: 'BAYERN MUNICH',
         urlImagenTitular: bayern, 
-        precio: 280000,
+        precio: 260000,
         stock: 10,
         categoria: 'Clubes de Europa'
     },
@@ -258,56 +260,80 @@ export const camisetas = productos.map(producto => ({
   caracteristicas: `100% algodón`  
 }));
 
-const zapatillasData = [
+const botinesData = [
+    
     {
         id: 101,
         marca: "Nike",
-        nombre: "Nike Pegasus Plus",
-        categoria: "Zapatillas",
-        descripcion: "Zapatillas de Running para Hombre",
-        precio: 369999,
+        nombre: "NIKE Tiempo Legend 10 ",
+        categoria: "Botines",
+        descripcion: "Botines Nike para Hombre",
+        precio: 119000,
         descuento: 0.3,
-        urlImagenTitular: nikePegasusPlus,
+        urlImagenTitular: NikeTiempoLegend10Gris,
         stock: 10
     },
     {
         id: 102,
-        marca: "Jordan",
-        nombre: "Jordan CMFT Era",
-        categoria: "Zapatillas",
-        descripcion: "Zapatillas Jordan para Mujer",
+        marca: "Nike",
+        nombre: "Nike Phantom GX II Club TF",
+        categoria: "Botines",
+        descripcion: "Botines Nike para Hombre Blanco",
         precio: 269999,
         descuento: 0.35,
-        urlImagenTitular: jordanCMFT,
+        urlImagenTitular: NikePhantomGXIIClubBlanco,
         stock: 10
     },
     {
         id: 103,
         marca: "Adidas",
-        nombre: "Adidas CourtBlock Azul",
-        categoria: "Zapatillas",
-        descripcion: "Zapatillas Adidas para Hombre",
-        precio: 149999,
+        nombre: "Adidas F50 Club TF",
+        categoria: "Botines",
+        descripcion: "Botines Adidas para Hombre Blanco",
+        precio: 119000,
         descuento: 0.20,
-        urlImagenTitular: adidasCourtBlockAzul,
+        urlImagenTitular: AdidasF50ClubTFBlanco,
         stock: 10
     },
     {
         id: 104,
         marca: "Adidas",
-        nombre: "Adidas Runner 2",
-        categoria: "Zapatillas",
-        descripcion: "Zapatillas Adidas para Hombre",
+        nombre: "Adidas F50 Club TF",
+        categoria: "Botines",
+        descripcion: "Botines Adidas para Hombre negro y amarillo",
         precio: 199999,
         descuento: 0.50,
-        urlImagenTitular: adidasRunner2,
+        urlImagenTitular: AdidasF50ClubTFNegroAmarillo,
+        stock: 10
+    },
+    {
+        id: 105,
+        marca: "Adidas",
+        nombre: "Adidas F50 Messi Club TF Crudo",
+        categoria: "Botines",
+        descripcion: "Botines Adidas para Hombre Blanco y celeste",
+        precio: 199999,
+        descuento: 0.50,
+        urlImagenTitular: AdidasF50MessiClubTFCrudo,
+        stock: 10
+    },
+    {
+        id: 106,
+        marca: "Adidas",
+        nombre: "Adidas F50 Club TF Negro",
+        categoria: "Botines",
+        descripcion: "Botines Adidas para Hombre negro",
+        precio: 199999,
+        descuento: 0.50,
+        urlImagenTitular: AdidasF50ClubTFNegro,
         stock: 10
     }
+
 ]
 
-export const zapatillas = zapatillasData.map(zapato => ({
+export const botines = botinesData.map(zapato => ({
     ...zapato,
     precioOferta: zapato.precio - (zapato.precio * zapato.descuento)
 }));
 
-export const todosLosProductos = [...camisetas, ...zapatillas];
+export const todosLosProductos = [...camisetas, ...botines];

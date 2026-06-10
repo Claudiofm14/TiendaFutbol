@@ -1,9 +1,9 @@
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-const DropdownFilter = ({ orden, setOrden }) => {
+
+const DropdownFilter = ({ setOrden }) => {
 
     const handleSelect = (eventKey) => {
         if (eventKey) setOrden(eventKey);
@@ -13,7 +13,7 @@ const DropdownFilter = ({ orden, setOrden }) => {
     return (
         <Nav className="me-auto">
 
-            <NavDropdown title="Ordenar por:"   onSelect={handleSelect} >
+            <NavDropdown title="Ordenar por:"   onSelect={handleSelect}  >
 
                 <NavDropdown.Item eventKey="Destacados">
                     Destacados

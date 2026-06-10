@@ -16,6 +16,13 @@ const OfertaCard = ({producto}) => {
         const cantidadYaEnCarrito = itemEnCarrito ? itemEnCarrito.cantidad : 0;
         return producto.stock - cantidadYaEnCarrito;
     };
+     const disponibilidadStock = (producto) => {
+        const stockReal = getStockDisponible(producto);
+        if (stockReal <= 0) {
+            return <span className="text-danger fw-bold" style={{ fontSize: '0.8rem' }}>Sin Stock</span>;
+        }
+        return <span className="text-success fw-bold" style={{ fontSize: '0.8rem' }}>Disponible ({stockReal} u.)</span>;
+    };
 
     return(
         <div className={styles.card}>
@@ -34,6 +41,9 @@ const OfertaCard = ({producto}) => {
                 </div>
 
                 <span className={styles.discountLabel}>{(producto.descuento) * 100}% de descuento</span>
+                <div>
+                    {disponibilidadStock(producto)}
+                </div>
 
                 <Button
                     variant={getStockDisponible(producto) <= 0 ? "secondary" : "dark"}

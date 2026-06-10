@@ -135,7 +135,7 @@ function CamisetasClubes() {
     const [orden, setOrden] = useState("Destacados");
     const [categoriaActual, setCategoriaActual] = useState("Clubes Argentinos");
 
-    const categorias = ["Clubes Argentinos", "Selección", "Clubes de Europa", "Zapatillas"];
+    const categorias = ["Clubes Argentinos", "Selección", "Clubes de Europa", "Botines"];
 
     const productosPorCategoria = productos.filter(producto => {
         if (!producto.categoria) return categoriaActual === "Clubes Argentinos";
@@ -187,7 +187,7 @@ function CamisetasClubes() {
                             />
                         ))}
                     </div>
-                    <DropdownFilter orden={orden} setOrden={setOrden}/>
+                    <DropdownFilter setOrden={setOrden}/>
                 </div>
             </section>
 

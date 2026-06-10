@@ -10,6 +10,8 @@ function Carrito() {
     const totalProductos = carrito.reduce((acumulador, producto) => {
         return acumulador + producto.cantidad;
     }, 0);
+
+    
     const totalPrecio = carrito.reduce((acumulador, producto) => {
         return acumulador + (producto.precio * producto.cantidad);
     }, 0);
