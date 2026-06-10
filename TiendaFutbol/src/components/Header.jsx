@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext.jsx";
 import ButtonCarrito from "./ButtonCarrito/ButtonCarrito.jsx";
-import logo from '../assets/images/nombreTienda.png';
+import logo from '../assets/images/nombreTienda3.png';
 
 const OpcionNav = ({ to, children, onClick }) => {
     const [hover, setHover] = useState(false);
