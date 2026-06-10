@@ -55,7 +55,7 @@ const TarjetaProducto = ({ producto, navigate, disponibilidadStock, setProductoS
                     <Card.Title className="text-uppercase fw-bold text-dark mb-1" style={{ fontSize: '1rem' }}>{producto.nombre}</Card.Title>
                     <Card.Text className="text-muted mb-2" style={{ fontSize: '0.85rem' }}>{producto.descripcion}</Card.Text>
                     <div className="d-flex align-items-center gap-2 mb-2">
-                        <span className="fw-bold fs-5 text-dark">${producto.precio}</span>
+                        <span className="fw-bold fs-5 text-dark">${(producto.precio).toLocaleString('es-AR')}</span>
                     </div>
                 </div>
                 <div>
@@ -230,7 +230,7 @@ function CamisetasClubes() {
                                     style={{ maxHeight: '90%', maxWidth: '90%', objectFit: 'contain' }}
                                 />
                             </div>
-                            <h4 className="fw-bold text-dark mb-2">${productoSeleccionado.precio}</h4>
+                            <h4 className="fw-bold text-dark mb-2">${(productoSeleccionado.precio).toLocaleString('es-AR')}</h4>
                             <p className="text-muted" style={{ fontSize: '0.9rem' }}>
                                 Camiseta oficial premium de alta calidad. Ideal para lucir los colores de tu pasión en cada partido o entrenamiento.
                             </p>
@@ -242,7 +242,7 @@ function CamisetasClubes() {
                 </Modal.Body>
                 <Modal.Footer className="border-0 pt-0">
                     <Button 
-                        variant="primary"
+                        variant="dark"
                         className="w-100 fw-bold rounded-pill py-2"
                         disabled={productoSeleccionado && getStockDisponible(productoSeleccionado) <= 0}
                         onClick={() => {
