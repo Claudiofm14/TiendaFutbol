@@ -31,8 +31,10 @@ const Footer = () => {
             id: 1,
             titulo: "Categorías",
             links: [
-                { texto: "Clubes" },
-                { texto: "Selecciones" }
+                { texto: "Clubes Argentinos" },
+                { texto: "Selecciones" },
+                { texto: "Clubes de Europa"},
+                { texto:"Botines"}
             ]
         },
         {
