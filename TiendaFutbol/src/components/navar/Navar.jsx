@@ -154,7 +154,7 @@ function Navar1() {
               <Nav.Link as={NavLink} to="/camisetasClubes" className={styles.navLinkItem}>CLUBES</Nav.Link>
               <Nav.Link as={NavLink} to="/selecciones" className={styles.navLinkItem}>SELECCIONES</Nav.Link>
               <Nav.Link as={NavLink} to="/deportes" className={styles.navLinkItem}>DEPORTES</Nav.Link>
-              <Nav.Link as={NavLink} to="#ofertas" className={styles.navLinkItem}>OFERTAS</Nav.Link>
+              <Nav.Link as={NavLink} to="/ofertas" className={styles.navLinkItem}>OFERTAS</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

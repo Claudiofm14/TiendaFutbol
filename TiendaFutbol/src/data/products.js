@@ -133,7 +133,7 @@ export const camisetas=productos.map(producto => ({
 }));
 
 
-export const zapatillas = [
+const zapatillasData = [
     {
         id: 1,
         marca:"Nike",
@@ -141,8 +141,7 @@ export const zapatillas = [
         categoria:"Zapatillas de Running para Hombre",
         precio:369999,
         descuento:0.3,
-        precioOferta: this.precio - (this.precio * this.descuento),
-        urlImagenTitular: nikePegasusPlus,
+        imagenUrl: nikePegasusPlus,
         stock: 10
     },
     {
@@ -152,7 +151,6 @@ export const zapatillas = [
         categoria: "Zapatillas Jordan para Mujer",
         precio:269999,
         descuento: 0.35,
-        precioOferta: this.precio - (this.precio * this.descuento),
         imagenUrl: jordanCMFT
     },
 
@@ -163,7 +161,6 @@ export const zapatillas = [
         categoria: "Zapatillas Adidas para Hombre",
         precio:149999,
         descuento: 0.20,
-        precioOferta: this.precio - (this.precio * this.descuento),
         imagenUrl: adidasCourtBlockAzul
     },
     {
@@ -173,10 +170,15 @@ export const zapatillas = [
         categoria: "Zapatillas Adidas para Hombre",
         precio:199999,
         descuento: 0.50,
-        precioOferta: this.precio - (this.precio * this.descuento),
         imagenUrl: adidasRunner2
     }
 
 
 
 ]
+
+// Calculamos la oferta de forma segura
+export const zapatillas = zapatillasData.map(zapato => ({
+    ...zapato,
+    precioOferta: zapato.precio - (zapato.precio * zapato.descuento)
+}));

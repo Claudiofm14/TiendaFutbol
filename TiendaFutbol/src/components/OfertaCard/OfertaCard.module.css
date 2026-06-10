@@ -1,0 +1,73 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.cardImageContainer {
+    background-color: #f6f6f6;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cardImageContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.saleLabel {
+    color: #c05621;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.productTitle {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.productSubtitle {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #707070;
+    margin-bottom: 0.5rem;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.originalPrice {
+    color: #707070;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.currentPrice {
+    font-weight: 700;
+    color: #111;
+    font-size: 1rem;
+}
+
+.discountLabel {
+    color: #16a34a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}

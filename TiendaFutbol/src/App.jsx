@@ -15,6 +15,7 @@ import DetalleProducto from "./pages/DetalleProducto/DetalleProducto.jsx";
 import Nosotros from "./pages/Nosotros/Nosotros.jsx";
 import Selecciones from "./pages/Selecciones/Selecciones.jsx";
 import Error404 from "./pages/Error 404/Error404.jsx";
+import Oferta from "./pages/Ofertas/Oferta.jsx";
 
 function App(){
   
@@ -39,6 +40,7 @@ function App(){
                     <Route path="/producto/:id" element={<DetalleProducto/>}/>
                     <Route path="/nosotros" element={<Nosotros/>}/>
                     <Route path="/selecciones" element={<Selecciones/>}/>
+                    <Route path="/ofertas" element={<Oferta/>}/>
                     <Route path={"*"} element={<Error404/>} />
 
                 </Routes>

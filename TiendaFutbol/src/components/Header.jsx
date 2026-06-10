@@ -36,8 +36,8 @@ function Header() {
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">falta completar</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                completar
+              <NavDropdown.Item as={NavLink} to="/ofertas">
+                Ofertas
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
