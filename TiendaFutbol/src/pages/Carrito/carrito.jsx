@@ -4,7 +4,6 @@ import Header from "../../components/Header.jsx";
 import { Card, Col, Button, Container, Row, Form } from "react-bootstrap";
 import { Link } from "react-router";
 import styles from "./carrito.module.css";
-import Footer from "../../components/footer/Footer.jsx";
 
 function Carrito() {
     const { carrito, vaciarCarrito, realizarCompra, limpiarBuscador, actualizarCantidad, eliminarProducto } = useContext(CartContext);
