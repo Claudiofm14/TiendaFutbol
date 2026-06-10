@@ -1,4 +1,4 @@
-import Navar from "../components/navar/Navar.jsx";
+import Header from "../components/Header.jsx";
 import Banner from "../components/Banner/Banner.jsx";
 import Burbujas from "../components/burbuja/Burbujas.jsx";
 import SobreNosotros from "../components/sobreNosotros/SobreNosotros.jsx";
@@ -9,7 +9,7 @@ import CarruselCliente from "../components/clientes/CarruselCliente.jsx";
 function Inicio() {
   return (
     <div className="container-fluid p-0">
-        <Navar />
+        <Header />
         <Banner/>
         <BannerCuotas/>
         <SobreNosotros/>
@@ -20,4 +20,4 @@ function Inicio() {
   )
 }
 
-export default Inicio
+export default Inicio;

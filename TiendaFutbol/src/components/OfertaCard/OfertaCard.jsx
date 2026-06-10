@@ -7,7 +7,7 @@ const OfertaCard = ({producto}) => {
     return(
         <div className={styles.card}>
             <div className={styles.cardImageContainer}>
-                <img src={producto.imagenUrl} alt={producto.nombre}/>
+                <img src={producto.urlImagenTitular} alt={producto.nombre}/>
             </div>
 
             <div className={styles.cardInfo}>
